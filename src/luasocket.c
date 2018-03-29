@@ -31,6 +31,7 @@
 #include "tcp.h"
 #include "udp.h"
 #include "select.h"
+#include "packet.h"
 
 /*-------------------------------------------------------------------------*\
 * Internal function prototypes
@@ -50,6 +51,7 @@ static const luaL_Reg mod[] = {
     {"inet", inet_open},
     {"tcp", tcp_open},
     {"udp", udp_open},
+    {"packet", packet_open},
     {"select", select_open},
     {NULL, NULL}
 };
