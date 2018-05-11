@@ -135,7 +135,7 @@ static int parseMac(const char* str, uint8_t* mac){
 * Send data through net packet socket
 \*-------------------------------------------------------------------------*/
 static int meth_sendto(lua_State *L) {
-    p_packet pkt = (p_packet) auxiliar_checkgroup(L, "packet{link}", 1);
+    p_packet pkt = (p_packet) auxiliar_checkclass(L, "packet{net}", 1);
     size_t count, sent = 0;
     const char *data = luaL_checklstring(L, 2, &count);
     const char *mac = luaL_checkstring(L, 3);
