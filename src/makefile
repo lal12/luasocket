@@ -288,7 +288,8 @@ SOCKET_OBJS= \
 	except.$(O) \
 	select.$(O) \
 	tcp.$(O) \
-	udp.$(O)
+	udp.$(O) \
+	packet.$(O)
 
 #------
 # Modules belonging mime-core
@@ -310,8 +311,7 @@ UNIX_OBJS=\
 	unixstream.$(O) \
 	unixdgram.$(O) \
 	compat.$(O) \
-	unix.$(O) \
-	packet.$(O)
+	unix.$(O)
 
 #------
 # Modules belonging to serial (device streams)
