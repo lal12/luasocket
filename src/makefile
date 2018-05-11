@@ -310,7 +310,8 @@ UNIX_OBJS=\
 	unixstream.$(O) \
 	unixdgram.$(O) \
 	compat.$(O) \
-	unix.$(O)
+	unix.$(O) \
+	packet.$(O)
 
 #------
 # Modules belonging to serial (device streams)
@@ -420,7 +421,7 @@ inet.$(O): inet.c inet.h socket.h io.h timeout.h usocket.h
 io.$(O): io.c io.h timeout.h
 luasocket.$(O): luasocket.c luasocket.h auxiliar.h except.h \
 	timeout.h buffer.h io.h inet.h socket.h usocket.h tcp.h \
-	udp.h select.h
+	udp.h select.h packet.h
 mime.$(O): mime.c mime.h
 options.$(O): options.c auxiliar.h options.h socket.h io.h \
 	timeout.h usocket.h inet.h
@@ -436,3 +437,4 @@ unix.$(O): unix.c auxiliar.h socket.h io.h timeout.h usocket.h \
 	options.h unix.h buffer.h
 usocket.$(O): usocket.c socket.h io.h timeout.h usocket.h
 wsocket.$(O): wsocket.c socket.h io.h timeout.h usocket.h
+packet.$(0): packet.c packet.h auxiliar.h socket.h inet.h timeout.h usocket.h
